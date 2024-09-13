@@ -1,0 +1,11 @@
+.css-ui034o-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: var(--color-black) !important;
+  font-weight: 600 !important;
+}
+.tab-btn {
+  color: var(--color-black) !important;
+  font-weight: 600 !important;
+}
+.tabss {
+  margin-right: 20px !important;
+}

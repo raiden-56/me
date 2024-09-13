@@ -1,0 +1,26 @@
+.sideMenuTab {
+  border: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.icon-box {
+  background-color: #222831;
+  padding: 15px;
+  border-radius: 8px;
+}
+.sideMenu-bar {
+  position: sticky;
+  top: 0%;
+  background-color: #09101a;
+  display: inline-block !important;
+  height: 100vh;
+}
+.sideMenuTab:hover {
+  color: #f2aa4cff;
+}
+.icon-box:hover {
+  background-color: #f2aa4cff;
+}
+.sideMenu-text {
+  font-size: 16px !important;
+  letter-spacing: 8% !important;
+}
