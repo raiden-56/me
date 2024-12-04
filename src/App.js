@@ -5,25 +5,27 @@ import { useEffect, useState } from "react";
 import Loader from "./Widgets/Loader";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fake = () => {
+    const fakeLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 10000);
+      }, 3000);
     };
-    fake();
-  });
+
+    fakeLoad();
+  }, []);
+
   return (
     <BrowserRouter>
-      <Routes>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <Route strict path={"/"} element={<Layout />} />
-        )}
-      </Routes>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Layout />} />
+        </Routes>
+      )}
     </BrowserRouter>
   );
 }

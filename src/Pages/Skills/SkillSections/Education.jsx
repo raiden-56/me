@@ -32,7 +32,7 @@ function Education() {
                 fontSize={"var(--font-20)"}
                 color={"var(--color-white)"}
               >
-                2024-2026
+                2024-present
               </Typography>
               <Typography color={"var(--color-white)"}>
                 I'm a passionate UI/UX designer with a mission to create

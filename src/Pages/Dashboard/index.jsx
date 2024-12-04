@@ -8,7 +8,8 @@ import Contact from "../Contact";
 import Portfolio from "../Portfolio";
 import ScrollToTopButton from "../../Widgets/ScrollTop";
 import Footer from "../../Widgets/Footer";
-import { AnimatePresence, useAnimation, motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 function Dashboard() {
   const controls = useAnimation();
@@ -16,62 +17,113 @@ function Dashboard() {
   useEffect(() => {
     controls.start({ y: 10, opacity: 1, scale: 1 });
 
-    // Trigger the animation on component mount
-    // controls.start({ y: 10, opacity: 1, scale: 1 });
-
-    // window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      // window.removeEventListener("scroll", handleScroll);
-    };
+    return () => {};
   }, [controls]);
 
   const handleResumeClick = () => {
     window.open(
-      "https://drive.google.com/file/d/18OEv518rjcZRdK3eAQKfxvbeK57NgfJK/view?usp=drive_link",
+      "https://drive.google.com/file/d/19jhAvwyYK3Bf2130Y7TTrXLSceR1_VTD/view?usp=drive_link",
       "_blank"
     );
   };
   return (
     <>
       <ScrollToTopButton />
-      <AnimatePresence>
-        <div id="banner-img">
-          <motion.div
-            initial={{ y: 250, opacity: 0, scale: 0.8 }}
-            animate={controls}
-            transition={{ ease: "easeOut", duration: 0.5 }}
-            exit={{ opacity: 0 }}
+      <div className="banner-bg" id="banner-img">
+        <Box className="banner-content">
+          <Typography
+            color={"var(--color-light-grey)"}
+            className="banner-font"
+            textTransform={"uppercase"}
           >
-            <Box className="banner-content">
-              <Typography
-                color={"#fff"}
-                className="banner-font"
-                textTransform={"uppercase"}
-              >
-                Hi, I'm <span style={{ color: "#F2AA4CFF" }}>Ganesh!</span>{" "}
-                <br />
-                SOftware <span style={{ color: "#F2AA4CFF" }}>Engineer</span>
-              </Typography>
+            Hi, I'm <span style={{ color: "#8750F7" }}>Ganesh!</span>
+          </Typography>
+          <Typography
+            color={"var(--color-light-grey)"}
+            letterSpacing={2}
+            fontSize={"var(--font-24)"}
+            fontStyle={"italic"}
+            mb={2}
+          >
+            <Typewriter
+              words={[
+                "Front End Developer",
+                "Graphic Designer",
+                "UI-UX Designer",
+                "Motion Graphic Designer",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </Typography>
+          <Grid container>
+            <Grid item xl={10.5} lg={10.5} md={10.5} sm={12} xs={12}>
               <Typography color={"var(--color-light-grey)"} mb={3}>
-                I'm a passionate UI/UX designer with a mission to create
-                delightful and intuitive digital experiences. With a strong
-                foundation in design principles and a keen eye for detail, I
-                specialize in translating complex ideas into user- friendly
-                interfaces that captivate and engage.
+                Innovative Frontend Developer and UI/UX Designer with 2+ years
+                of experience crafting responsive web applications and
+                user—centric designs. Proficient in HTML, Css, JavaScript,
+                React.js, Redux, Material UI, and Adobe Creative Suite
               </Typography>
-              <Button
-                className="btn-btn"
-                endIcon={<FileDownloadOutlinedIcon />}
-                variant="contained"
-                onClick={handleResumeClick}
-              >
-                Download Cv
-              </Button>
-            </Box>
-          </motion.div>
-        </div>
-      </AnimatePresence>
+            </Grid>
+          </Grid>
+          <Button
+            className="btn-btn"
+            endIcon={<FileDownloadOutlinedIcon />}
+            variant="contained"
+            onClick={handleResumeClick}
+          >
+            Download Cv
+          </Button>
+        </Box>
+      </div>
+      <div className="mobile-bg" id="mobile-banner">
+        <Stack mb={3} textAlign={"center"} className="mobile-content">
+          <Typography
+            color={"var(--color-light-grey)"}
+            className="mobile-font"
+            textTransform={"uppercase"}
+            fontSize={"42px"}
+          >
+            Hi, I'm <span style={{ color: "#8750F7" }}>Ganesh!</span>
+          </Typography>
+          <Typography
+            color={"var(--color-light-grey)"}
+            letterSpacing={2}
+            fontSize={"var(--font-52)"}
+            fontStyle={"italic"}
+            mb={2}
+          >
+            <Typewriter
+              words={[
+                "Front End Developer",
+                "Graphic Designer",
+                "UI-UX Designer",
+                "Motion Graphic Designer",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </Typography>
+          <Stack display={"grid"} justifyContent={"center"}>
+            <Button
+              className="btn-btn"
+              endIcon={<FileDownloadOutlinedIcon />}
+              variant="contained"
+              onClick={handleResumeClick}
+            >
+              Download Cv
+            </Button>
+          </Stack>
+        </Stack>
+      </div>
       <AboutUs />
       <Skills />
       <Portfolio />

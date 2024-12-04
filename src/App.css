@@ -1,8 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
-*/
+@import url("https://fonts.googleapis.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+
 :root {
-  --color-primary: #f2aa4cff;
-  /* --color-newPrimary: #F2AA4CFF; */
+  --color-primary: #8750f7;
   --color-black: #02050a;
   --color-dark-blue: #09101a;
   --color-light-grey: #a2a2a2;
@@ -13,17 +12,25 @@
   --font-24: 24px;
   --font-22: 22px;
   --font-20: 20px;
+  --font-36: 36px;
+  --font-52: 52px;
 
   --font-weight-600: 600 !important;
 }
 
+code {
+  font-family: "Poppins" !important;
+}
+
 body {
   background-color: var(--color-black) !important;
+  font-family: "Poppins" !important;
 }
 * {
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
+  font-family: "Poppins" !important;
 }
 .title {
   font-size: 20px !important;
@@ -53,4 +60,8 @@ body {
   border: 1px solid var(--color-border-grey);
   border-radius: 8px;
   padding: 20px;
+}
+.skill-card:hover .skill-img {
+  transform: rotate(45deg) scale(0.7);
+  transition: transform 0.3s ease-in-out;
 }

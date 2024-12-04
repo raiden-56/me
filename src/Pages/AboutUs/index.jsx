@@ -1,8 +1,7 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Ambition from "../../assets/icons/ambition.svg";
-import Goal from "../../assets/icons/goal.svg";
+import Goal from "../../assets/icons/about-me.svg";
 import About from "../../assets/images/about-img.png";
 import "./about.css";
 import Certificate from "../../assets/icons/certificate.svg";
@@ -35,35 +34,40 @@ function AboutUs() {
       exit={{ opacity: 0 }}
     >
       <section id="about_us">
-        <Stack container px={4} mt={4} pt={4} direction={"column"}>
-          <Typography className="title">About us</Typography>
+        <Stack
+          container
+          px={4}
+          sx={{
+            mt: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
+          }}
+          direction={"column"}
+        >
+          <Typography className="title">About me</Typography>
           <Grid item md={8} sm={12}>
             <Typography className="main-title">
               Crafting stories through design and innovation
             </Typography>
           </Grid>
           <Grid container>
-            <Grid item md={6} sm={12} my={3}>
+            <Grid display={"flex"} item md={6} sm={12} my={3}>
               <Stack mt={2} gap={1}>
-                <img style={{ width: "18%" }} src={Ambition} alt="ambition" />
-                <Typography color={"var(--color-light-grey)"}>
-                  I'm a passionate UI/UX designer with a mission to create
-                  delightful and intuitive digital experiences. With a strong
-                  foundation in design principles and a keen eye for detail, I
-                  specialize in translating complex ideas into user- friendly
-                  interfaces that captivate and engage.
-                </Typography>
                 <img
                   style={{ width: "18%", margin: "20px 0" }}
                   src={Goal}
                   alt="goal"
                 />
                 <Typography color={"var(--color-light-grey)"}>
-                  I'm a passionate UI/UX designer with a mission to create
-                  delightful and intuitive digital experiences. With a strong
-                  foundation in design principles and a keen eye for detail, I
-                  specialize in translating complex ideas into user- friendly
-                  interfaces that captivate and engage.
+                  I'm a passionate software engineer having{" "}
+                  <strong>
+                    <u>2+ years</u>
+                  </strong>{" "}
+                  at NSPlustechnology Pvt Ltd, with expertise in crafting
+                  dynamic web applications using technologies like React JS,
+                  Redux, HTML5, CSS3, and JavaScript. With a flair for design, I
+                  bring creativity to life through tools like Adobe Photoshop,
+                  Illustrator, and Figma. Blending technical proficiency with
+                  artistic vision, I strive to deliver seamless digital
+                  experiences that leave a lasting impression.
                 </Typography>
               </Stack>
             </Grid>
@@ -75,7 +79,7 @@ function AboutUs() {
                 <Stack direction={"row"} alignItems={"center"} gap={2}>
                   <img width={"30%"} src={Certificate} alt="" />
                   <Stack>
-                    <Typography className="year-text">01+</Typography>
+                    <Typography className="year-text">02+</Typography>
                     <Typography color={"var(--color-white)"}>
                       Years Of Experience
                     </Typography>

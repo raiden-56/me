@@ -1,61 +1,95 @@
-import { Grid, Stack, Typography } from "@mui/material";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import FirstPortfolio from "../../assets/images/firstPortfolio.jpg";
-import SecondPortfolio from "../../assets/images/secondPortfolio.jpg";
-import ThirdPortfolio from "../../assets/images/thirdPortfolio.jpg";
-import FourthPortfolio from "../../assets/images/fourthPortfolio.jpg";
-import FifthPortfolio from "../../assets/images/fifthPortfolio.jpg";
+import Metaverse from "../../assets/icons/meta-verse.jpg";
+import TikTakToe from "../../assets/icons/tik-tak-toe.svg";
+import ArrowRight from "../../assets/icons/right-arrow.svg";
+import "./portfolio.css";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 function Portfolio() {
+  const PortfolioData = [
+    {
+      img: Metaverse,
+      altName: "metaverse",
+      projectName: "Metaverse",
+      url: "https://raiden-56.github.io/metaverse/",
+    },
+    {
+      img: TikTakToe,
+      altName: "tik-tak-toe",
+      projectName: "Tik Tak Toe",
+      url: "https://raiden-56.github.io/tik_tak_toe/",
+    },
+  ];
+  const handleButtonClick = (url) => {
+    if (url) window.open(url, "_blank");
+  };
   return (
     <>
-      <Stack container px={4} mt={18} direction={"column"}>
+      <Stack id="portfolio" px={4} sx={12} mt={6} direction={"column"}>
         <Typography textAlign={"center"} className="title">
           MY RECENT PORTFOLIO
         </Typography>
-        <Grid item md={12} sm={12}>
+        <Grid item md={12} sx={12} sm={12}>
           <Typography textAlign={"center"} className="main-title">
             Elevate your brand to new heights with our portfolio expertise
           </Typography>
         </Grid>
       </Stack>
-      <Grid container px={4} mt={8}>
-        <Grid item md={6} sm={12} pr={4}>
-          <img
-            style={{ width: "100%", borderRadius: "8px" }}
-            src={FirstPortfolio}
-            alt=""
-          />
-        </Grid>
-        <Grid item md={6} pr={4} sm={12}>
-          <img
-            style={{ width: "100%", borderRadius: "8px" }}
-            src={SecondPortfolio}
-            alt=""
-          />
-        </Grid>
-        <Grid item md={4} pr={4} mt={4} sm={12}>
-          <img
-            style={{ width: "100%", borderRadius: "8px" }}
-            src={ThirdPortfolio}
-            alt=""
-          />
-        </Grid>
-        <Grid item md={4} pr={4} mt={4} sm={12}>
-          <img
-            style={{ width: "100%", borderRadius: "8px" }}
-            src={FourthPortfolio}
-            alt=""
-          />
-        </Grid>
-        <Grid item md={4} pr={4} mt={4} sm={12}>
-          <img
-            style={{ width: "100%", borderRadius: "8px" }}
-            src={FifthPortfolio}
-            alt=""
-          />
-        </Grid>
+      <Grid container p={2}>
+        {PortfolioData &&
+          PortfolioData.length > 0 &&
+          PortfolioData.map((port, index) => {
+            return (
+              <Grid
+                key={index}
+                item
+                md={4}
+                xs={12}
+                sm={12}
+                lg={4}
+                xl={4}
+                xxl={4}
+                p={3}
+              >
+                <Stack className="img-container">
+                  <img className="image" src={port.img} alt={port.altName} />
+                  <Stack className="overlay">
+                    <Stack className="text" gap={2}>
+                      <Typography fontSize={"var(--font-24)"}>
+                        {port.projectName}
+                      </Typography>
+                      <img
+                        style={{ cursor: "pointer" }}
+                        onClick={() => handleButtonClick(port.url)}
+                        width={"30%"}
+                        src={ArrowRight}
+                        alt=""
+                      />
+                    </Stack>
+                  </Stack>
+                </Stack>
+              </Grid>
+            );
+          })}
       </Grid>
+      <Stack
+        justifyContent={"center"}
+        textAlign={"center"}
+        display={"grid"}
+        mx={"0 auto"}
+      >
+        <Button
+          endIcon={<ArrowForwardIcon />}
+          px={5}
+          className="btn-btn"
+          variant="contained"
+          textAlign="center"
+          mx={"0 auto"}
+        >
+          View More...
+        </Button>
+      </Stack>
     </>
   );
 }

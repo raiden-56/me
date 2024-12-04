@@ -6,21 +6,27 @@
   background-color: #222831;
   padding: 15px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .sideMenu-bar {
   position: sticky;
   top: 0%;
-  background-color: #09101a;
+  background-color: var(--color-dark-blue);
   display: inline-block !important;
   height: 100vh;
 }
 .sideMenuTab:hover {
-  color: #f2aa4cff;
+  color: #8750f7;
 }
 .icon-box:hover {
-  background-color: #f2aa4cff;
+  background-color: #8750f7;
 }
 .sideMenu-text {
   font-size: 16px !important;
   letter-spacing: 8% !important;
+}
+@media screen and (max-width: 768px) {
+  .sideMenu-bar {
+    display: none !important;
+  }
 }

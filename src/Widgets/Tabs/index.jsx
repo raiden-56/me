@@ -34,10 +34,10 @@ function GenericTabs({ tabs }) {
               borderRadius: "4px",
               border: value === index && "none",
               padding: "10px 60px",
-              backgroundColor: value === index ? "#F2AA4CFF" : "#141C27",
-              color: value === index ? "#000" : "#fff",
+              backgroundColor: value === index ? "#8750F7" : "#141C27",
+              color: "#fff",
               "&:hover": {
-                color: value === index ? "#000" : "#555",
+                color: "#fff",
               },
             }}
           />

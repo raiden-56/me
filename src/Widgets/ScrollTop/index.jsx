@@ -21,10 +21,11 @@ const ScrollToTopButton = () => {
         right: "20px",
         border: "none",
         cursor: "pointer",
+        zIndex: 1,
       }}
     >
       <Box className="scroll-btn">
-        <FaArrowUp />
+        <FaArrowUp style={{ fill: "#fff" }} />
       </Box>
     </button>
   );

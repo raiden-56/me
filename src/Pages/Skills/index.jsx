@@ -1,44 +1,36 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Grid, Stack, Typography } from "@mui/material";
+import { useEffect } from "react";
 import MyTabs from "../../Widgets/Tabs";
 import Education from "./SkillSections/Education";
 import { useAnimation } from "framer-motion";
-import Biography from "./SkillSections/Biography";
+import Biography from "./SkillSections/MyProjects";
 import SkillsSection from "./SkillSections/SkillsSection";
 import Experience from "./SkillSections/Experience";
+import MyAwards from "./SkillSections/MyAwards";
 
 function Skills() {
-  const [value, setValue] = useState(0);
   const controls = useAnimation();
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   const tabs = [
     {
       label: "Experience",
-      content: (
-        <>
-          <Experience />
-        </>
-      ),
+      content: <Experience />,
     },
     {
       label: "Education",
-      content: (
-        <>
-          <Education />
-        </>
-      ),
+      content: <Education />,
     },
     {
-      label: "Biography",
+      label: "Projects",
       content: <Biography />,
     },
     {
       label: "Skills",
       content: <SkillsSection />,
+    },
+    {
+      label: "Awards",
+      content: <MyAwards />,
     },
   ];
 
@@ -67,7 +59,7 @@ function Skills() {
         transition={{ ease: "easeOut", duration: 0.5 }}
         exit={{ opacity: 0 }}
       >
-        <Stack container px={4} mt={18} direction={"column"}>
+        <Stack id="skill" container px={4} mt={18} direction={"column"}>
           <Typography textAlign={"center"} className="title">
             MY skills
           </Typography>
