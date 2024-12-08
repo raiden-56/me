@@ -2,6 +2,7 @@ import { Button, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import Metaverse from "../../assets/icons/meta-verse.jpg";
 import TikTakToe from "../../assets/icons/tik-tak-toe.svg";
+import Chatbot from "../../assets/icons/chatbot.svg";
 import ArrowRight from "../../assets/icons/right-arrow.svg";
 import "./portfolio.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -19,6 +20,12 @@ function Portfolio() {
       altName: "tik-tak-toe",
       projectName: "Tik Tak Toe",
       url: "https://raiden-56.github.io/tik_tak_toe/",
+    },
+    {
+      img: Chatbot,
+      altName: "Chatbot",
+      projectName: "Chatbot",
+      url: "https://raiden-56.github.io/chatbot/",
     },
   ];
   const handleButtonClick = (url) => {

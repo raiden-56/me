@@ -67,13 +67,11 @@ function SideMenuBar() {
   };
 
   const handleInsta = () => {
-    window.open("www.instagram.com/ganesh__.67/", "_blank");
+    window.open("https://www.instagram.com/ganesh__.67/", "_blank");
   };
 
   const handleModeClick = () => {
     setMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
-
-    // Update CSS variables in :root
     if (mode === "dark") {
       document.documentElement.style.setProperty("--color-primary", "#8750F7");
       document.documentElement.style.setProperty("--color-black", "#ffffff");

@@ -21,6 +21,9 @@ function GenericTabs({ tabs }) {
         indicatorColor="none"
         textColor="black"
         centered
+        variant="scrollable"
+        scrollButtons
+        allowScrollButtonsMobile
         sx={{ borderBottom: "none", marginBottom: "30px" }}
       >
         {tabs.map((tab, index) => (

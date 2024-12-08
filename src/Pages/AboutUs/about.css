@@ -13,3 +13,13 @@
   border-radius: 8px;
   right: 2%;
 }
+@media screen and (max-width: 768px) {
+  .years-card {
+    position: absolute;
+    width: 85%;
+    background-color: var(--color-primary);
+    padding: 15px 10px 15px 30px;
+    border-radius: 8px;
+    right: 8%;
+  }
+}

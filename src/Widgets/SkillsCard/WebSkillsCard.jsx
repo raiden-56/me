@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
 import SkillsSquareCards from "../SkillsSquareCards";
 const cardData = [
@@ -9,7 +9,6 @@ const cardData = [
   },
 ];
 function WebSkillsCard() {
-  
   return (
     <>
       <Stack sx={{ backgroundColor: "var( --color-dark-blue)" }}>

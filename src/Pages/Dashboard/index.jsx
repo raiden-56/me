@@ -83,7 +83,7 @@ function Dashboard() {
       <div className="mobile-bg" id="mobile-banner">
         <Stack mb={3} textAlign={"center"} className="mobile-content">
           <Typography
-            color={"var(--color-light-grey)"}
+            color={"#fff"}
             className="mobile-font"
             textTransform={"uppercase"}
             fontSize={"42px"}
@@ -91,9 +91,9 @@ function Dashboard() {
             Hi, I'm <span style={{ color: "#8750F7" }}>Ganesh!</span>
           </Typography>
           <Typography
-            color={"var(--color-light-grey)"}
+            color={"#fff"}
             letterSpacing={2}
-            fontSize={"var(--font-52)"}
+            fontSize={"var(--font-24)"}
             fontStyle={"italic"}
             mb={2}
           >

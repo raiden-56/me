@@ -30,9 +30,8 @@ const TopHeader = () => {
 
   const handleModeClick = () => {
     setMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
-
     if (mode === "dark") {
-      document.documentElement.style.setProperty("--color-primary", "#4CAF50");
+      document.documentElement.style.setProperty("--color-primary", "#8750F7");
       document.documentElement.style.setProperty("--color-black", "#ffffff");
       document.documentElement.style.setProperty(
         "--color-dark-blue",
@@ -49,10 +48,7 @@ const TopHeader = () => {
       );
       document.body.style.backgroundColor = "var(--color-white)";
     } else {
-      document.documentElement.style.setProperty(
-        "--color-primary",
-        "#f2aa4cff"
-      );
+      document.documentElement.style.setProperty("--color-primary", "#8750F7");
       document.documentElement.style.setProperty("--color-black", "#02050a");
       document.documentElement.style.setProperty(
         "--color-dark-blue",
@@ -96,8 +92,9 @@ const TopHeader = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
         px={2}
+        sx={{ height: "6rem" }}
       >
-        <Stack direction={"row"} gap={1} alignItems={"center"}>
+        <Stack direction={"row"} gap={2} alignItems={"center"}>
           <img width={"20%"} src={Logo} alt="logo" />
           <Typography
             letterSpacing={2}
@@ -144,19 +141,19 @@ const TopHeader = () => {
           },
         }}
       >
-        <Box sx={{ position: "absolute", top: 30, right: 30 }}>
+        <Box sx={{ position: "absolute", top: 20, right: 20 }}>
           <IconButton
             aria-label="close navigation"
             onClick={toggleDrawer(false)}
           >
-            <CloseIcon sx={{ fontSize: 50, color: "#818181" }} />
+            <CloseIcon sx={{ fontSize: 50, color: "var(--color-primary)" }} />
           </IconButton>
         </Box>
 
         <Box
           sx={{
             position: "relative",
-            top: "25%",
+            top: "18%",
             width: "100%",
             textAlign: "center",
             mt: 3,
