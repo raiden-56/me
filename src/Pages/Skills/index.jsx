@@ -65,8 +65,7 @@ function Skills() {
           </Typography>
           <Grid item md={12} sm={12}>
             <Typography textAlign={"center"} className="main-title">
-              Crafting stories through design
-              <br /> and innovation
+              Showcasing Expertise: Skills, Achievements, and Education
             </Typography>
           </Grid>
           <MyTabs tabs={tabs} />

@@ -49,6 +49,7 @@ function AboutUs() {
                 style={{ width: "18%", margin: "20px 0" }}
                 src={Goal}
                 alt="goal"
+                className="mobile-hide"
               />
               <Typography color={"var(--color-light-grey)"}>
                 I'm a passionate software engineer having{" "}
