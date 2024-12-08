@@ -1,0 +1,12 @@
+.scroll-btn {
+  height: 40px !important;
+  width: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 22px;
+  background-color: var(--color-primary);
+  z-index: 9999;
+  
+}

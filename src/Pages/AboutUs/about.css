@@ -1,0 +1,25 @@
+.img-container {
+  position: relative;
+}
+.year-text {
+  font-size: 40px !important;
+  color: var(--color-white);
+}
+.years-card {
+  position: absolute;
+  width: 30%;
+  background-color: var(--color-primary);
+  padding: 15px 10px 15px 30px;
+  border-radius: 8px;
+  right: 2%;
+}
+@media screen and (max-width: 768px) {
+  .years-card {
+    position: absolute;
+    width: 85%;
+    background-color: var(--color-primary);
+    padding: 15px 10px 15px 30px;
+    border-radius: 8px;
+    right: 8%;
+  }
+}
