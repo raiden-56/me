@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Widgets/Layout";
 import { useEffect, useState } from "react";
 import Loader from "./Widgets/Loader";
@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {isLoading ? (
         <Loader />
       ) : (
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<Layout />} />
         </Routes>
       )}
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
