@@ -59,7 +59,7 @@ function Skills() {
         transition={{ ease: "easeOut", duration: 0.5 }}
         exit={{ opacity: 0 }}
       >
-        <Stack id="skill" container px={4} mt={18} direction={"column"}>
+        <Stack id="skill" container px={4} mt={24} direction={"column"}>
           <Typography textAlign={"center"} className="title">
             MY skills
           </Typography>
