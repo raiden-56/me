@@ -37,9 +37,9 @@ function AboutUs() {
         direction={"column"}
       >
         <Typography className="title">About me</Typography>
-        <Grid item md={8} sm={12}>
+        <Grid item md={11} sm={12}>
           <Typography className="main-title">
-            Crafting stories through design and innovation
+            Unveiling My Journey: Passion, Skills, and Aspirations
           </Typography>
         </Grid>
         <Grid container>
@@ -66,7 +66,7 @@ function AboutUs() {
             </Stack>
           </Grid>
           <Grid item md={6} sm={12}>
-            <div className="img-container">
+            <div className="about-container">
               <img width={"100%"} src={About} alt="aboutimg" />
             </div>
             <Box className="years-card">

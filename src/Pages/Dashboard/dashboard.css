@@ -33,13 +33,13 @@
 }
 .mobile-content {
   position: absolute;
-  top: 40%;
-  left: 4%;
+  top: 50%;
+  left: 2%;
   /* transform: translate(-90%, -50%); */
 }
 
 .mobile-font {
-  font-size: 70px !important;
+  font-size: 52px !important;
   font-weight: 700 !important;
 }
 
@@ -48,7 +48,7 @@
     position: relative;
     display: block;
     background: url(../../assets/images/mobile-banner.jpg) center no-repeat;
-    height: 100vh;
+    height: 92vh;
     background-size: cover;
   }
   .banner-bg {

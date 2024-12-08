@@ -33,13 +33,25 @@ function Portfolio() {
   };
   return (
     <>
-      <Stack id="portfolio" px={4} sx={12} mt={6} direction={"column"}>
+      <Stack
+        id="portfolio"
+        sx={{
+          px: {
+            lg: 4,
+            md: 1,
+            xs: 1,
+            sm: 1,
+          },
+        }}
+        mt={6}
+        direction={"column"}
+      >
         <Typography textAlign={"center"} className="title">
           MY RECENT PORTFOLIO
         </Typography>
-        <Grid item md={12} sx={12} sm={12}>
+        <Grid item md={12} xs={12} sm={12}>
           <Typography textAlign={"center"} className="main-title">
-            Elevate your brand to new heights with our portfolio expertise
+            Crafting Excellence: Skills, Achievements, and Education
           </Typography>
         </Grid>
       </Stack>

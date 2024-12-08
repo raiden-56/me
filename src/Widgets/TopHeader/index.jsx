@@ -92,7 +92,7 @@ const TopHeader = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
         px={2}
-        sx={{ height: "6rem" }}
+        sx={{ height: "4rem" }}
       >
         <Stack direction={"row"} gap={2} alignItems={"center"}>
           <img width={"20%"} src={Logo} alt="logo" />
@@ -146,14 +146,14 @@ const TopHeader = () => {
             aria-label="close navigation"
             onClick={toggleDrawer(false)}
           >
-            <CloseIcon sx={{ fontSize: 50, color: "var(--color-primary)" }} />
+            <CloseIcon sx={{ fontSize: 40, color: "var(--color-primary)" }} />
           </IconButton>
         </Box>
 
         <Box
           sx={{
             position: "relative",
-            top: "18%",
+            top: "15%",
             width: "100%",
             textAlign: "center",
             mt: 3,
@@ -167,7 +167,7 @@ const TopHeader = () => {
                     primary={text}
                     primaryTypographyProps={{
                       sx: {
-                        fontSize: "36px",
+                        fontSize: "22px",
                         textAlign: "center",
                         transition: "0.3s",
                         "&:hover": { color: "#f1f1f1" },

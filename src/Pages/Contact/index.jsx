@@ -19,7 +19,7 @@ function Contact() {
         <Typography className="title">Contact us</Typography>
         <Grid item md={10} sm={12}>
           <Typography className="main-title">
-            Elevate your brand to new heights with our portfolio expertise
+            Let's Connect: Get in Touch with Me
           </Typography>
         </Grid>
       </Stack>
